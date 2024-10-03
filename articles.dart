@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'api_service.dart';
 import 'model.dart';
-import 'details.dart'; // Import the details screen
-
+import 'details.dart'; 
 class ArticlesScreen extends StatefulWidget {
   const ArticlesScreen({super.key});
 
@@ -36,7 +35,7 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
               child: CircularProgressIndicator(),
-            ); // Show loading indicator while fetching data
+            ); // Show loading indicator while fetching dat
           } else if (snapshot.hasError) {
             return const Center(child: Text('Error fetching articles'));
           } else if (!snapshot.hasData || snapshot.data?.articles == null || snapshot.data!.articles!.isEmpty) {
