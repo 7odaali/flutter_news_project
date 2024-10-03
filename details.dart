@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:newsmahmoud/model.dart'; // Import your model that contains Articles
+import 'package:newsmahmoud/model.dart';
 
 class ArticleDetailScreen extends StatelessWidget {
-  final Articles article; // Declare article as a class field
+  final Articles article; 
 
-  const ArticleDetailScreen({Key? key, required this.article}) : super(key: key); // Initialize article in the constructor
+  const ArticleDetailScreen({Key? key, required this.article}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class ArticleDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
 
-            // Display the article description
+        
             Text(
               article.description ?? "Description not available",
               style: const TextStyle(
@@ -59,7 +59,7 @@ class ArticleDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // Display the article content
+           
             Text(
               article.content ?? "Content not available",
               style: const TextStyle(
